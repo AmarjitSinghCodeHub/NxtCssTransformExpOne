@@ -3,6 +3,41 @@
 
 @layer base{
   body{
-    @apply bg-zinc-800 text-[11pt] text-zinc-200 font-[Manrope];
+    @apply bg-zinc-800 text-[11pt] text-zinc-200 font-[Manrope] w-full h-screen flex justify-center items-center;
+  }
+}
+
+@layer components{
+  .boxArea{
+    width:200px;
+    height: 200px;
+    border:1px solid #3f3f46;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    transform: rotateY(30deg);
+    position: relative;;
+  }
+
+  .boxArea::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    transform: rotateY(-30deg);
+    transform-origin: left;
+    perspective: 800px;
+    transform-style: preserve-3d;
+
+  }
+
+  .divInnerBox{
+    width:200px;
+    height: 200px;
+    background-color: aliceblue;
+    transform: rotateX(60deg);
+    transform-origin: bottom;
   }
 }

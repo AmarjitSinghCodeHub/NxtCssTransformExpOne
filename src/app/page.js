@@ -1,8 +1,11 @@
 import React from 'react'
+import Box from '@/components/Box'
 
 const page = () => {
   return (
-    <div>page</div>
+    <>
+      <Box/>
+    </>
   )
 }
 export default page
